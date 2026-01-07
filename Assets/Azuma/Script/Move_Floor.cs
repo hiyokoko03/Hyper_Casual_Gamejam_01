@@ -57,24 +57,50 @@ public class Move_Floor : MonoBehaviour
                 targetPos = pointBPos;
         }
     }
+
     void OnCollisionEnter(Collision other)
     {
-        // プレイヤーが乗ってきたら親子関係を結ぶ
-        if (other.gameObject.CompareTag("Player"))
+        // 「Player タグの付いた親」を探す
+        Transform t = other.transform;
+        Transform playerRoot = null;
+
+        while (t != null)
         {
-            Debug.Log("enter");
-            other.transform.SetParent(transform, true); // true でワールド座標を維持
+            if (t.CompareTag("Player"))
+            {
+                playerRoot = t;
+                break;
+            }
+            t = t.parent;
+        }
+
+        if (playerRoot != null)
+        {
+            Debug.Log("Floor Enter: " + playerRoot.name);
+            playerRoot.SetParent(transform, true); // プレイヤー階層ごと床の子にする
         }
     }
 
     void OnCollisionExit(Collision other)
     {
-        // プレイヤーが離れたら親子関係を解除
-        if (other.gameObject.CompareTag("Player"))
+        // Exit も同じ親を探して外す
+        Transform t = other.transform;
+        Transform playerRoot = null;
+
+        while (t != null)
         {
-            Debug.Log("enter");
-            other.transform.SetParent(null, true); // 親を外す
+            if (t.CompareTag("Player"))
+            {
+                playerRoot = t;
+                break;
+            }
+            t = t.parent;
+        }
+
+        if (playerRoot != null && playerRoot.parent == transform)
+        {
+            Debug.Log("Floor Exit: " + playerRoot.name);
+            playerRoot.SetParent(null, true);
         }
     }
-
 }
