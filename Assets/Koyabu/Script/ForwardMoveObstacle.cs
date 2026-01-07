@@ -9,6 +9,7 @@ public class ForwardMoveObstacle : MonoBehaviour
     private float currentPhase = 0.0f;
     private Vector3 initialLocalPos;
     private Rigidbody rb;
+    private bool isRewinding = false;
 
     void Start()
     {
@@ -27,20 +28,26 @@ public class ForwardMoveObstacle : MonoBehaviour
 
     void Update()
     {
+        // スペースキーの状態をチェック
+        if (Input.GetKeyDown(KeyCode.Space)) isRewinding = true;
+        if (Input.GetKeyUp(KeyCode.Space)) isRewinding = false;
+
         // 時間（進行度）の管理
-        if (TimeManager.isRewinding)
+        if (isRewinding == false)
         {
-            currentPhase -= Time.deltaTime * moveSpeed;
+            currentPhase += Time.deltaTime * moveSpeed;
+            transform.localPosition = new Vector3(
+                initialLocalPos.x,
+                transform.localPosition.y,
+                initialLocalPos.z - currentPhase
+            );
         }
         else
         {
-            currentPhase += Time.deltaTime * moveSpeed;
+            currentPhase -= Time.deltaTime * moveSpeed;
         }
+ 
 
-        transform.localPosition = new Vector3(
-            initialLocalPos.x,
-            transform.localPosition.y,
-            initialLocalPos.z - currentPhase
-        );
+
     }
 }

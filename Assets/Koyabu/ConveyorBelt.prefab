@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213544034311675060, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1213544034311675060, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
       propertyPath: m_LocalScale.y
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213544034311675060, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1213544034311675060, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -65,6 +65,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1546220301143335957, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546220301143335957, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546220301143335957, guid: c69e0423cea37aa4fb22a15536df34dd, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -94,5 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5c767d61c1c5c448a8e1cd434c6d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushDirection: {x: 1, y: 0, z: 0}
-  pushPower: 0
+  conveyorSpeed: 10
