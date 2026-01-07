@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene_iwasaki.unity
-    guid: 4c179502ea1ccee4fb5fd52f8359e20c
+    path: Assets/Scenes/Title.unity
+    guid: c38411e0e40794c4d8b85f85b57622e4
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 316c936168a228c44ba5d0a3512a5723
+  - enabled: 1
+    path: Assets/Scenes/Scene_iwasaki.unity
+    guid: 4c179502ea1ccee4fb5fd52f8359e20c
   m_configObjects: {}
