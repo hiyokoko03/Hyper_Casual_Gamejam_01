@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3373427880449141051}
   - component: {fileID: 1920205952755425247}
   - component: {fileID: 5007182788123948946}
+  - component: {fileID: 777650022074904009}
   m_Layer: 0
   m_Name: MoveFloor
   m_TagString: Untagged
@@ -287,3 +288,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!114 &777650022074904009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7844561928455471461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe259a6a5be13b44494a771d84b44225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFrames: 300
