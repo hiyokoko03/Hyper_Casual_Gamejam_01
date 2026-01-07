@@ -28,7 +28,7 @@ public class ConveyorBelt : MonoBehaviour
 
     void Update()
     {
-        // スペースキーの状態をチェック
+        // スペースキーの状態をチェック!
         if (Input.GetKeyDown(KeyCode.Space)) moveDirectionX = -1.0f;
         if (Input.GetKeyUp(KeyCode.Space)) moveDirectionX = 1.0f;
 
