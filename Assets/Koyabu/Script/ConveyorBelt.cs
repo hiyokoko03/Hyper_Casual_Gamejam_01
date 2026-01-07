@@ -9,6 +9,10 @@ public class ConveyorBelt : MonoBehaviour
     private float currentSpeed = 0.0f;
     private Transform player;
 
+    
+
+     
+
     //ƒvƒŒƒCƒ„[‚Æ‚ÌÚG”»’è
     private void OnTriggerEnter(Collider other)
     {
