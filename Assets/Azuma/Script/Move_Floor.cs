@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move_Floor : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header("移動設定")]
     public float speed = 3f;           // 移動速度（1秒あたりの距離）
 
     private Vector3 pointAPos;         // PointA のワールド座標
@@ -61,6 +62,7 @@ public class Move_Floor : MonoBehaviour
         // プレイヤーが乗ってきたら親子関係を結ぶ
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("enter");
             other.transform.SetParent(transform, true); // true でワールド座標を維持
         }
     }
@@ -70,6 +72,7 @@ public class Move_Floor : MonoBehaviour
         // プレイヤーが離れたら親子関係を解除
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("enter");
             other.transform.SetParent(null, true); // 親を外す
         }
     }
