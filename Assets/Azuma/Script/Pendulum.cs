@@ -25,6 +25,7 @@ public class Pendulum : MonoBehaviour
 
     void Update()
     {
+        ////////////////////////////////////////////////////////s
         // ★ スペースを押している間だけ「時間の進む向き」を逆にする
         float dir = Input.GetKey(KeyCode.Space) ? -1f : 1f;
 
